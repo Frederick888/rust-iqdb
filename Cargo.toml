@@ -1,0 +1,19 @@
+[package]
+name = "iqdb"
+version = "0.1.0"
+authors = ["Frederick Zhang <frederick888@tsundere.moe>"]
+
+[dependencies]
+reqwest = "0.8.5"
+clap = { version = "2.31.2", optional = true }
+error-chain = "0.11.0"
+html5ever = "0.22.0"
+markup5ever = "0.7.2"
+
+[[bin]]
+name = "iqdb"
+path = "src/main.rs"
+required-features = ["cli"]
+
+[features]
+cli = ["clap"]
